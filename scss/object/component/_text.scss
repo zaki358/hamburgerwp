@@ -1,0 +1,10 @@
+@use "../../foundation/mixin";
+@use "../../foundation/function";
+@use "../../foundation/variables";
+
+.c-text--page {
+    @include mixin.font-roboto;
+    font-size   : 1.6rem;
+    margin-right: 5px;
+    line-height : 35px;
+}

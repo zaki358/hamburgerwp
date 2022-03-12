@@ -1,0 +1,17 @@
+.c-icon--pagination__prev {
+    display      : inline-block;
+    border-bottom: solid 1px black;
+    border-left  : solid 1px black;
+    width        : 10px;
+    height       : 10px;
+    transform    : rotate(45deg);
+}
+
+.c-icon--pagination__next {
+    display     : inline-block;
+    border-top  : solid 1px black;
+    border-right: solid 1px black;
+    width       : 10px;
+    height      : 10px;
+    transform   : rotate(45deg);
+}

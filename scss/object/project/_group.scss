@@ -1,0 +1,124 @@
+@use "../../foundation/mixin";
+@use "../../foundation/function";
+@use "../../foundation/variables";
+
+.p-group-img {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    img {
+        width: function.svw(265);
+        //width: 580px;
+        @include mixin.media("tab") {
+            //width: 360px;
+            width: function.tvw(580);
+        }
+        @include mixin.media("pc") {
+            //width: 360px;
+            width: function.pvw(580);
+        }
+    }
+}
+
+.p-group-img__item {
+    margin-top: 30px;
+    width: 100%;
+    //object-fit: contain;
+    //overflow: hidden;
+    //display: flex;
+    //flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(9.1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    @include mixin.media("tab") {
+        margin-top: 240px;
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    @include mixin.media("pc") {
+        margin-top: 30px;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.p-group__list--lv1 {
+    margin-top: 60px;
+    ol {
+        margin-top: 14px;
+    }
+}
+
+//.p-group__list--lv2{}
+
+.p-group__list--lv3 {
+    margin-top: 60px;
+    //padding-left: 0;
+    ul {
+        margin-top: 14px;
+        //padding-left: 0;
+    }
+}
+
+//.p-group__list--lv4{}
+
+.p-group__pre {
+    margin-top: 60px;
+    background-color: #f5f5f5;
+    height: 240px;
+}
+
+.p-group__table {
+    margin-top: 60px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    th,
+    td {
+        border: 1px solid #707070;
+        height: 77px;
+        padding-left: 30px;
+    }
+}
+
+.p-group__table--left {
+    width: 30%;
+}
+.p-group__table--right {
+    width: 70%;
+}
+
+.p-group-__btn {
+    margin-top: 30px;
+    display: inline-block;
+    color: #3c2a10;
+    font-size: 1.6rem;
+    width: 100%;
+    height: 80px;
+    border-radius: 30px;
+    @include mixin.media("tab") {
+        width: 430px;
+        height: 105px;
+        border-radius: 30px;
+    }
+    @include mixin.media("pc") {
+    }
+}
+
+.p-group__bold {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    display: block;
+    font-size: 1.6rem;
+    color: #3c2a10;
+}

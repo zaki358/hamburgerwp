@@ -1,0 +1,15 @@
+@use "variables";
+@use "sass:math";
+
+
+@function svw($spVw){
+   @return (math.div($spVw,variables.$spWidth) * 100vw);
+}
+
+@function tvw($tabVw){
+   @return (math.div($tabVw,variables.$tabWidth) * 100vw);
+}
+
+@function pvw($pcVw){
+    @return (math.div($pcVw,variables.$pcWidth) * 100vw);
+ }

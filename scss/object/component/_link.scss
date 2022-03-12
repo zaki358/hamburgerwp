@@ -1,0 +1,19 @@
+.c-link--menu {
+    text-decoration: none;
+    color: #707070;
+}
+
+.c-link--card--front  {
+    display        : inline-block;
+    text-decoration: none;
+    margin-left    : 10px;
+    width          : 63px;
+    height         : 5px;
+    background     : white;
+}
+
+.c-link--article__quote {
+    color                : #0000EE;
+    text-decoration      : underline;
+    text-decoration-color: currentColor;
+}

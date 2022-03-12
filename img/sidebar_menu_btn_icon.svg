@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36.243" height="36.243" viewBox="0 0 36.243 36.243">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #707070;
+        stroke-width: 6px;
+      }
+    </style>
+  </defs>
+  <g id="グループ_22" data-name="グループ 22" transform="translate(-280.379 -26.379)">
+    <line id="線_9" data-name="線 9" class="cls-1" x2="32" y2="32" transform="translate(282.5 28.5)"/>
+    <line id="線_10" data-name="線 10" class="cls-1" x1="32" y2="32" transform="translate(282.5 28.5)"/>
+  </g>
+</svg>

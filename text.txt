@@ -1,0 +1,199 @@
+img/archive/archive_card_img_pc.png
+
+.l-header {
+    overflow: hidden;
+    background-color: #fff7ef;
+    width: 100%;
+    height: 217px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mixin.media("pc") {
+        width: 80%;
+        height: 217px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
+//.p-sidebar{
+//background-color: rgba(0,0,0,0.3);
+//position: absolute;
+//left: 20%;
+ //   top: 0;
+//width: 100%;
+//height: 100%;
+//z-index: 90;
+//@include mixin.media("pc"){
+//    display: none;
+//// }
+//}
+
+
+
+
+        <aside id="sidebar">
+            <div class="c-layer--sidebar"></div>
+            <nav class="p-menu">
+                <!--projectで使用の場合  p-menu--sidebar__title-->
+                <h2 class="c-title--sidebar">Menu</h2>
+                <!--projectで使用の場合  p-menu__title-->
+                <h3 class="c-title--menu">バーガー</h3>
+                <ul class="p-menu__list">
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">ハンバーガー</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">チーズバーガー</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">テリヤキバーガー</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">アボカドバーガー</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">フィッシュバーガー</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">ベーコンバーガー</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">チキンバーガー</a></li>
+                </ul class="p-menu__list">
+                <h3 class="c-title--menu">サイド</h3>
+                <ul class="p-menu__list">
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">ポテト</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">サラダ</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">ナゲット</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">コーン</a></li>
+                </ul>
+                <h3 class="c-title--menu">ドリンク</h3>
+                <ul class="p-menu__list">
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">コーラ</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">ファンタ</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">オレンジ</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">アップル</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">紅茶(Ice/Hot)</a></li>
+                    <li class="c-list--menu__text"><a href="" class="c-link--menu">コーヒー(Ice/Hot)</a></li>
+                </ul>
+                <!--projectで使用の場合 p-menu__btn-->
+                <button class="c-btn--menu js-menu--close"><img src="../../../img/sidebar_menu_btn_icon.svg"></button>
+            </nav>
+        </aside>
+
+
+ <div class="nav-links">
+                <a class="prev page-numbers" href="https://techacademy.jp/magazine/category/webdesign/"></a><!-- 現在の前のページへのリンク -->
+                <a class="page-numbers" href="https://techacademy.jp/magazine/category/webdesign/">1</a><!-- 1ページ目へのリンク -->
+                <span class="page-numbers current">2</span><!-- 現在閲覧しているページ(2ページ) -->
+                <a class="page-numbers" href="https://techacademy.jp/magazine/category/webdesign/page/3">3</a><!-- 3ページ目へのリンク -->
+                <span class="page-numbers dots">…</span><!-- ...の部分 -->
+                <a class="page-numbers" href="https://techacademy.jp/magazine/category/webdesign/page/27">27</a><!-- 27ページ目(最後のページ)へのリンク -->
+                <a class="next page-numbers" href="https://techacademy.jp/magazine/category/webdesign/page/3">»</a><!-- 現在の次のページへのリンク -->
+              </div>
+
+
+
+            <ul class="example2">
+                <li>前へ</li>
+                <li class="this">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>次へ</li>
+            </ul>
+
+            <nav class="p-menu">
+  <ul class="p-menu__list">
+     <li class="p-menu__list__item c-title--menu">バーガー</li>
+       <ul class="p-menu-lv2">
+
+
+               <aside id="sidebar">
+            <div class="c-layer--sidebar"></div>
+            <nav class="p-menu">
+                <!--projectで使用の場合  p-menu--sidebar__title-->
+                <h2 class="c-title--sidebar">Menu</h2>
+                <!--projectで使用の場合  p-menu__title-->
+                <ul>
+                    <li class="c-title--menu">バーガー</li>
+                    <ul class="p-menu__list">
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">ハンバーガー</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">チーズバーガー</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">テリヤキバーガー</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">アボカドバーガー</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">フィッシュバーガー</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">ベーコンバーガー</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">チキンバーガー</a></li>
+                    </ul class="p-menu__list">
+                    <li class="c-title--menu">サイド</li>
+                    <ul class="p-menu__list">
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">ポテト</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">サラダ</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">ナゲット</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">コーン</a></li>
+                    </ul>
+                    <li class="c-title--menu">ドリンク</li>
+                    <ul class="p-menu__list">
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">コーラ</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">ファンタ</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">オレンジ</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">アップル</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">紅茶(Ice/Hot)</a></li>
+                        <li class="c-list--menu__text"><a href="" class="c-link--menu">コーヒー(Ice/Hot)</a></li>
+                    </ul>
+                </ul>
+                <!--projectで使用の場合 p-menu__btn-->
+                <button class="c-btn--menu js-menu--close"><img src="../../../img/sidebar_menu_btn_icon.svg"></button>
+            </nav>
+        </aside>
+
+
+
+
+
+        .p-group-img__item {
+    object-fit: contain;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    //place-items: end center;
+    flex-wrap: wrap;
+    gap: 20px 16px;
+    @include mixin.media("tab"){
+    justify-content: space-around;    
+    //justify-content: stretch;
+    }
+    @include mixin.media("pc"){
+    }
+    img {
+        //margin: 0 auto;
+        width: function.svw(315);
+        flex-basis: 100%;
+        @include mixin.media("tab"){
+        width: function.tvw(320);
+        flex-basis: 45%;
+        }
+        @include mixin.media("pc"){
+        width: function.pvw(360);
+        flex-basis: 30%;
+        }
+    }
+}
+
+
+.p-group-img__item {
+    object-fit: contain;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    //gap: 20px 1px;
+    @include mixin.media("tab"){
+    }
+    @include mixin.media("pc"){
+        //gap: 20px 1vw;
+    }
+    img {
+        width: 95vw;
+        @include mixin.media("tab"){
+        width: 43vw;
+        }
+        @include mixin.media("pc"){
+        width: 20vw;
+        //flex-basis: 30%;
+        }
+    }
+}

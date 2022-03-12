@@ -1,0 +1,12 @@
+@use "../foundation/mixin";
+
+#l-main{
+    background-color: #FFFDFA;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include mixin.media("pc") {
+        grid-row   : 2;
+        grid-column: 1;
+    }
+}

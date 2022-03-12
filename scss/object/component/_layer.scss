@@ -1,0 +1,16 @@
+@use "../../foundation/mixin";
+
+
+.c-layer--sidebar.is-open{
+    width           : 100vw;
+    height          : 100vh;
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    z-index         : 100;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    transition      : all 300ms 0s ease;
+    @include mixin.media("pc") {
+        display: none;
+    }
+}

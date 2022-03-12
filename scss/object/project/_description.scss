@@ -1,0 +1,42 @@
+@use "../../foundation/mixin";
+@use "../../foundation/function";
+@use "../../foundation/variables";
+
+.p-description--archive {
+    //width  : 100vw;
+    //height : 395px;
+    padding   : 30px function.svw(22);
+    width     :function.svw(335);
+    min-height: 395px;
+    height    : auto;
+    color     : #3C2A10;
+    @include mixin.media("tab") {
+        //height : 292px;
+        width     :function.tvw(756);
+        min-height: 292px;
+    }
+    @include mixin.media("pc") {
+        width :function.pvw(1553);
+        //height : 216px;
+        min-height: 216px;
+    }
+}
+
+.p-description__text--archive {
+    //overflow-y: hidden;
+    //width     : function.svw(335);
+    //height    : 265px;
+    overflow-x: hidden;
+    margin-top: 30px;
+    min-height: 265px;
+    height    : auto;
+    font-size : 1.6rem;
+    @include mixin.media("tab") {
+        //height    : 145px;
+        min-height: 145px;
+    }
+    @include mixin.media("pc") {
+        //height    : 70px;
+        min-height: 70px;
+    }
+}

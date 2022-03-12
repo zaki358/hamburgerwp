@@ -1,0 +1,79 @@
+@use "../../foundation/mixin";
+@use "../../foundation/function";
+@use "../../foundation/variables";
+
+.p-map {
+    //text-align: center;
+    //overflow-y: hidden;
+    //height    : 690px;
+    //height: auto;
+    //min-height: 690px;
+    //height: 100%;
+    position  : relative;
+    width     : 100%;
+
+    @include mixin.media("tab") {
+        //height: 415px;
+        //min-height: 451px;
+    }
+    @include mixin.media("pc") {
+        //height: 650px;
+        //min-height: 650px;
+    }
+    &::before{
+        content         : '';
+        position        : absolute;
+        top             : 0;
+        left            : 0;
+        z-index         : 50;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        height          : 100%;
+        //min-height: 50%;
+        //height: auto;
+        width : 100%;
+        @include mixin.media("tab") {
+            display: none;
+        }
+        @include mixin.media("pc") {
+            display: none;
+        }
+    }
+}
+
+.p-map__item {
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    z-index         : 100;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    height          : 50%;
+    width            : 100%;
+    @include mixin.media("tab") {
+        height: 100%;
+        width : 100%;
+    }
+    @include mixin.media("pc") {
+        height: 100%;
+        width : function.pvw(950);
+    }
+    
+}
+
+.p-map__comment {
+    //text-align: left;
+    display   : inline-block;
+    overflow-x: hidden;
+    color     : white;
+    font-size : 1.4rem;
+    width     : function.svw(295);
+    margin-top: 20px;
+    padding-bottom: 30px;
+    @include mixin.media("tab") {
+        width: function.tvw(763);
+    }
+    @include mixin.media("pc") {
+        font-size : 1.6rem;
+        width     : function.pvw(697);
+        margin-top: 40px;
+    }
+}

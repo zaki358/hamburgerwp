@@ -1,0 +1,37 @@
+@use "../../foundation/mixin";
+@use "../../foundation/function";
+@use "../../foundation/variables";
+
+.p-header__form {
+    display   : inline-block;
+    max-height: 46px;
+    min-width : 320px;
+    margin-top: 38px;
+    width     : function.svw(320);
+    height    : 100vh;
+    @include mixin.media("tab") {
+        width: function.tvw(546);
+    }
+    @include mixin.media("pc") {
+        width       : function.pvw(545);
+        margin-right: 31px;
+        margin-top  : 0;
+    }
+}
+
+//ヘッダーフォーム部（テキスト入力部)ブロック要素(疑似要素使用のため)//
+.p-header__form__search {
+    display : inline-block;
+    position: relative;
+    width   : 72%;
+    height  : 100%;
+    &::before {
+        content       : url(../../../img/header_form_text_icon.svg);
+        position      : absolute;
+        top           : 25%;
+        left          : 10px;
+        z-index       : 100;
+        vertical-align: text-top;
+    }
+}
+
