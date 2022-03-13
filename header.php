@@ -16,19 +16,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
+    <?php wp_head(); ?>
 </head>
 
 <body>
     <div id="l-container">
         <header class="l-header p-header">
-            <p class="c-title--header">Hamburger</p>
-            <form class="p-header__form">
+            <p class="c-title--header"><?php bloginfo('name'); ?></p>
+
+            <form class="p-header__form" method="get" action="<!?php echo home_url('/'); ?>">
                 <div class="p-header__form__search">
-                    <!--projectで使用の場合 p-header__form__text-->
-                    <input type="search" class="c-form--header__text">
+                    <input class="c-form--header__text" type="search" name="s" id="s">
                 </div>
-                <!--projectで使用の場合 p-header__form__submit-->
-                <input type="submit" value="検索" class="c-form--header__submit ">
+                <input class="c-form--header__submit" type="submit" value="検索">
             </form>
+
             <button class="c-btn--header js-menu--open">Menu</button>
         </header>
