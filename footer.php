@@ -3,6 +3,7 @@
     <p class="c-title--footer__text__info">Copyright: RaiseTech</p>
 </footer>
 </div>
+<?php wp_footer(); ?>
 </body>
 
 </html>
