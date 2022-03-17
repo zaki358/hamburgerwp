@@ -7,11 +7,11 @@
     align-items        : center;
     width              : function.svw(375);
     height             : 285px;
-    background-image   : url(../../../img/front-page/front-page_main_title_img_sp2.jpg);
+    background-image   : url(../img/front-page/front-page_main_title_img_sp2.jpg);
     background-position: center center;
     background-size    : cover;
     @include mixin.media("tab") {
-        background-image: url(../../../img/front-page/front-page_main_title_img_pc1.jpg);
+        background-image: url(../img/front-page/front-page_main_title_img_pc1.jpg);
         width           : function.tvw(834);
         height          : 285px;
     }
