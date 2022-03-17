@@ -13,8 +13,8 @@
                 <p>ウィジェットは設定されていません。</p>
             </div>
         <?php endif; ?>
-        <button class="c-btn--menu js-menu--close"><img src="../../../img/sidebar_menu_btn_icon.svg"></button>
+
     </nav>
 
-   
+    <button class="c-btn--menu js-menu--close"><img src="../img/sidebar_menu_btn_icon.svg"></button>
 </aside>

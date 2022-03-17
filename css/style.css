@@ -259,14 +259,13 @@ th {
 }
 
 .c-title--box--front {
-  color: white;
   font-size: 3.6rem;
   font-weight: bold;
   padding-left: 6.6666666667vw;
 }
 @media screen and (min-width: 600px) {
   .c-title--box--front {
-    padding-left: 10.3117505995vw;
+    adding-left: 10.3117505995vw;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -399,7 +398,6 @@ th {
 }
 
 .c-title--box {
-  color: white;
   font-size: 3.6rem;
   font-weight: bold;
   padding-left: 6.6666666667vw;
@@ -452,6 +450,10 @@ th {
 }
 
 .c-btn--menu {
+  display: none;
+}
+
+.c-btn--menu.is-open {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -465,15 +467,16 @@ th {
   height: 32px;
   position: absolute;
   top: 3%;
-  left: 77.3333333333vw;
+  z-index: 1000;
+  right: 5%;
 }
 @media screen and (min-width: 600px) {
-  .c-btn--menu {
-    left: 37.170263789vw;
+  .c-btn--menu.is-open {
+    right: 5%;
   }
 }
 @media screen and (min-width: 1025px) {
-  .c-btn--menu {
+  .c-btn--menu.is-open {
     display: none;
   }
 }
@@ -758,25 +761,17 @@ body.is-open {
   align-items: center;
   width: 100vw;
   height: 285px;
-  background-image: url(../../../img/single/single_main_title_img.jpg);
-  background-repeat: no-repeat;
-  background-position: center 40%;
-  background-size: 130%;
 }
 @media screen and (min-width: 600px) {
   .p-box--single {
     width: 100vw;
     height: 500px;
-    background-size: 180%;
-    background-position: center 40%;
   }
 }
 @media screen and (min-width: 1025px) {
   .p-box--single {
     width: 80.8854166667vw;
     height: 500px;
-    background-size: 100%;
-    background-position: center center;
   }
 }
 

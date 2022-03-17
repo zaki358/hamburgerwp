@@ -38,17 +38,17 @@
 }
 
 .c-title--box--front {
-    color       : white;
+    //color       : white;
     font-size   : 3.6rem;
     font-weight : bold;
     padding-left: function.svw(25);
     @include mixin.media("tab") {
-        padding-left: function.tvw(86);
+        adding-left: function.tvw(86);
     }
     @include mixin.media("pc") {
         font-size   : 4rem;
         padding-left: function.pvw(87);
-        //padding-left: 85px;
+        ////padding-left: 85px;
     }
 }
 
@@ -173,7 +173,6 @@
 }
 
 .c-title--box {
-    color       : white;
     font-size   : 3.6rem;
     font-weight : bold;
     padding-left: function.svw(25);

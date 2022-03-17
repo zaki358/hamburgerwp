@@ -23,15 +23,22 @@
 }
 
 .c-btn--menu {
+    display: none;
+}
+
+.c-btn--menu.is-open {
     @include mixin.btn-reset;
     display : inline-block;
     width   : 32px;
     height  : 32px;
     position: absolute;
     top     : 3%;
-    left    : function.svw(290);
+    z-index: 1000;
+    //left    : function.svw(290);
+    right: 5%;
     @include mixin.media("tab"){
-        left:function.tvw(310);
+        //left:function.tvw(310);
+        right: 5%;
     }
     @include mixin.media("pc") {
         display: none;
