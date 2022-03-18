@@ -175,6 +175,7 @@
 .c-title--box {
     font-size   : 3.6rem;
     font-weight : bold;
+    color: white;
     padding-left: function.svw(25);
     @include mixin.media("tab") {
         padding-left: function.tvw(86);

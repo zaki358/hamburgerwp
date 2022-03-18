@@ -400,6 +400,7 @@ th {
 .c-title--box {
   font-size: 3.6rem;
   font-weight: bold;
+  color: white;
   padding-left: 6.6666666667vw;
 }
 @media screen and (min-width: 600px) {
@@ -761,6 +762,8 @@ body.is-open {
   align-items: center;
   width: 100vw;
   height: 285px;
+  background-repeat: no-repeat;
+  background-position: center 40%;
 }
 @media screen and (min-width: 600px) {
   .p-box--single {
