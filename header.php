@@ -12,7 +12,7 @@
 <body <?php body_class(); ?>>
     <div id="l-container">
         <header class="l-header p-header">
-            <p class="c-title--header"><?php bloginfo('name'); ?></p>
+            <a href="<?php echo home_url( '/' );?>"><p class="c-title--header"><?php bloginfo('name'); ?></p></a>
             <?php get_search_form(); ?>
             <button class="c-btn--header js-menu--open">Menu</button>
         </header>
