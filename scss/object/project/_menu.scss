@@ -4,41 +4,63 @@
 
 .p-menu {
     background-color: #f2ede9;
-    position        : fixed;
-    height          : 100vh;
-    width           : 87%;
-    left            : 100%;
-    top             : 0;
-    z-index         : 101;
-    transition      : all 300ms 0s ease;
-    overflow-y      : auto;
-    @include mixin.media("tab"){
-        width : 44%;
+    position: fixed;
+    height: 100vh;
+    width: 87%;
+    left: 100%;
+    top: 0;
+    z-index: 101;
+    transition: all 300ms 0s ease;
+    overflow-y: auto;
+    @include mixin.media("tab") {
+        width: 44%;
     }
     @include mixin.media("pc") {
         position: static;
-        height  : 100%;
-        width   : 100%;
+        height: 100%;
+        width: 100%;
     }
-    
 
-    &.is-open{
+    &.is-open {
         left: (100%-87%);
-        @include mixin.media("tab"){
-            left:(100%-44%);
+        @include mixin.media("tab") {
+            left: (100%-44%);
         }
     }
 }
 
-//.p-menu__list{}
+.p-menu__list {
+    margin-top : 85px;
+    * {
+        list-style: none;
+        
+    }
+    & > li {
+        margin-left: 40px;
+        margin-top: 40px;
+        font-weight: bold;
+        color      : #707070;
+        font-size  : 2.4rem;
+        & > ul {
+            margin-top: 10px;
+            padding-left: 20px;
+            font-size: 2.0rem;
+            font-weight: normal;
+            & > li {
+                margin-top: 23px;
+            }
+        }
+    }
+
+}
 
 .p-menu__lv2 {
     //margin-top  : 40px;
     //padding-left: 40px;
-    margin-top  : 10px;
+    margin-top: 10px;
     padding-left: 10px;
 }
 
 body.is-open {
-	position: fixed;
+    position: fixed;
 }

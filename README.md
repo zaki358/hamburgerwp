@@ -1,2 +1,2 @@
 # hamburgerwp
-ハンバーガーサイトのワークスペース化
+ハンバーガーサイトのWordPress化
