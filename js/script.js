@@ -4,16 +4,16 @@ jQuery(function ($) {
 		$(".p-menu").addClass("is-open");
 		$("body").addClass("is-open");
 		$(".c-layer--sidebar").addClass("is-open");
-		$(".c-btn--menu").addClass("is-open");
-		$(".c-btn--menu").show();
+		//$(".c-btn--menu").addClass("is-open");
+		//$(".c-btn--menu").show();
 
 	});
 	$(".js-menu--close").on("click", function () {
 		$(".p-menu").removeClass("is-open");
 		$("body").removeClass("is-open");
 		$(".c-layer--sidebar").removeClass("is-open");
-		$(".c-btn--menu").removeClass("is-open");
-		$(".c-btn--menu").hide();
+		//$(".c-btn--menu").removeClass("is-open");
+		//$(".c-btn--menu").hide();
 	});
 
 	$(window).on('load resize', function () {

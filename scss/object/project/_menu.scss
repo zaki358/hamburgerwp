@@ -20,7 +20,6 @@
         height  : 100%;
         width   : 100%;
     }
-
     &.is-open {
         left: (100%-87%);
         @include mixin.media("tab") {
@@ -58,6 +57,9 @@
 
 body.is-open {
     position: fixed;
+    @include mixin.media("pc") {
+        position: static;
+    }
 }
 
 .p-menu--footer {

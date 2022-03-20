@@ -13,9 +13,11 @@
             )
         ); ?>
 
+        <button class="c-btn--menu js-menu--close">
+            <img src="img/sidebar_menu_btn_icon.svg" alt="どうして・・・">
+        </button>
     </nav>
 
-    <button class="c-btn--menu js-menu--close"><img src="../img/sidebar_menu_btn_icon.svg"></button>
 </aside>
 
 
