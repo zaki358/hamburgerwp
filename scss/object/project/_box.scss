@@ -113,7 +113,7 @@
     background-repeat: no-repeat;
     ////background-position: center center;
     background-position: center 40%;
-    ////background-size    : cover;
+    background-size    : cover;
     //background-size: 130%;
     @include mixin.media("tab") {
         ////background-image: url(../../../img/front-page/front-page_main_title_img_pc1.jpg);

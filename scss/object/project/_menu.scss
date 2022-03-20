@@ -59,3 +59,9 @@
 body.is-open {
     position: fixed;
 }
+
+.p-menu--footer {
+    position : absolute;
+    top      : calc(40px - 1rem);
+    z-index: 110;
+}

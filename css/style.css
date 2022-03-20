@@ -122,6 +122,7 @@ a:hover {
 ul, ol {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 th {
@@ -332,11 +333,18 @@ th {
 }
 
 .c-title--footer__text__shop {
-  display: inline-block;
-  position: absolute;
-  top: calc(40px - 1rem);
   color: white;
   font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.c-title--footer__text__shop li {
+  display: inline-block;
+}
+.c-title--footer__text__shop li:nth-of-type(even)::before {
+  content: "|";
+  padding: 0 10px;
 }
 
 .c-title--footer__text__info {
@@ -658,9 +666,6 @@ th {
 .p-menu__list {
   margin-top: 85px;
 }
-.p-menu__list * {
-  list-style: none;
-}
 .p-menu__list > li {
   margin-left: 40px;
   margin-top: 40px;
@@ -678,13 +683,14 @@ th {
   margin-top: 23px;
 }
 
-.p-menu__lv2 {
-  margin-top: 10px;
-  padding-left: 10px;
-}
-
 body.is-open {
   position: fixed;
+}
+
+.p-menu--footer {
+  position: absolute;
+  top: calc(40px - 1rem);
+  z-index: 110;
 }
 
 .p-box--front {
@@ -806,6 +812,7 @@ body.is-open {
   height: 285px;
   background-repeat: no-repeat;
   background-position: center 40%;
+  background-size: cover;
 }
 @media screen and (min-width: 600px) {
   .p-box--page {
