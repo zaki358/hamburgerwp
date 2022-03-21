@@ -908,16 +908,16 @@ body.is-open {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 2.6666666667vw;
 }
 @media screen and (min-width: 600px) {
   .p-card__unit--front {
-    margin-bottom: 5px;
+    margin-bottom: 1.3788968825vw;
   }
 }
 @media screen and (min-width: 1025px) {
   .p-card__unit--front {
-    margin-bottom: 10px;
+    margin-bottom: 1.0416666667vw;
   }
 }
 

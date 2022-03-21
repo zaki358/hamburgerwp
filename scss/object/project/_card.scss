@@ -83,17 +83,18 @@
     display       : flex;
     flex-direction: column;
     align-items   : center;
-    
-    margin-bottom : 5px;
+    margin-bottom : function.svw(math.div(20, 2));
     @include mixin.media("tab") {
-        margin-bottom : 5px;
+        margin-bottom : function.tvw(math.div(23, 2));
     }
     @include mixin.media("pc") {
+        margin-bottom: function.pvw(math.div(40, 2));
         //margin-top: 650px;
-        margin-bottom: 10px;
         //top: 68%;
     }
 }
+
+
 
 .p-card__item--front {
     margin-top: auto;
