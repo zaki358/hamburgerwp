@@ -1,2 +1,2 @@
 # hamburgerwp
-ハンバーガーサイトのWordPress化
+ハンバーガーサイトのWordPress化開始
