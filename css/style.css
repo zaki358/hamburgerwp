@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Box sizing rules */
 *,
 *::before,
@@ -469,7 +470,7 @@ th {
   width: 32px;
   height: 32px;
   position: absolute;
-  top: 3%;
+  top: 1%;
   left: 77.3333333333vw;
 }
 @media screen and (min-width: 600px) {
@@ -583,11 +584,17 @@ th {
 }
 
 .c-text--page {
-  font-family: "Roboto", sans-serif;
-  color: #707070;
-  font-size: 1.6rem;
-  margin-right: 5px;
-  line-height: 35px;
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .c-text--page {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    color: #707070;
+    font-size: 1.6rem;
+    margin-right: 5px;
+    line-height: 35px;
+  }
 }
 
 .p-header__form {
@@ -1149,6 +1156,105 @@ body.is-open {
   height: 35px;
   margin-top: 145px;
   margin-bottom: 60px;
+  margin-left: 2.6666666667vw;
+  margin-right: 2.6666666667vw;
+}
+
+/*
+Default style for WP-PageNavi plugin
+http://wordpress.org/extend/plugins/wp-pagenavi/
+*/
+.wp-pagenavi {
+  clear: both;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .wp-pagenavi {
+    display: block;
+    width: auto;
+  }
+}
+.wp-pagenavi .pages {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .wp-pagenavi .pages {
+    margin-right: 50px;
+    display: inline;
+  }
+}
+.wp-pagenavi span {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .wp-pagenavi span {
+    display: inline;
+    font-family: "Roboto", sans-serif;
+    color: #707070;
+    margin: 2px 6px;
+    line-height: 35px;
+    text-decoration: none;
+  }
+  .wp-pagenavi span.current {
+    border-color: #000;
+    font-weight: bold;
+    color: white;
+    background-color: #3c2b1c;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    line-height: 35px;
+    text-align: center;
+  }
+}
+.wp-pagenavi .page {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .wp-pagenavi .page {
+    font-family: "Roboto", sans-serif;
+    color: #707070;
+    text-decoration: none;
+    border: 1px solid #bfbfbf;
+    margin: 2px 6px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    line-height: 35px;
+    text-align: center;
+  }
+  .wp-pagenavi .page:hover {
+    border-color: #000;
+  }
+}
+.wp-pagenavi .previouspostslink {
+  font-weight: normal;
+  color: #707070;
+}
+.wp-pagenavi .previouspostslink::after {
+  content: "前へ";
+}
+@media screen and (min-width: 600px) {
+  .wp-pagenavi .previouspostslink::after {
+    display: none;
+    content: "";
+  }
+}
+.wp-pagenavi .nextpostslink {
+  font-weight: normal;
+  color: #707070;
+}
+.wp-pagenavi .nextpostslink::before {
+  content: "次へ";
+}
+@media screen and (min-width: 600px) {
+  .wp-pagenavi .nextpostslink::before {
+    display: none;
+    content: "";
+  }
 }
 
 .p-pagination__item {
@@ -1178,7 +1284,7 @@ body.is-open {
 }
 .p-pagination__list li:nth-of-type(2) {
   color: white;
-  background-color: #3C2B1C;
+  background-color: #3c2b1c;
 }
 
 .p-pagination__unit {

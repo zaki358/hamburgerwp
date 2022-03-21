@@ -54,7 +54,7 @@ add_action('pre_get_post', function ($query) {
     if (is_admin() || !$query->is_main_query()) {
         return;
     }
-    if ($query->is_category()) {
+    if ($query->is_search()) {
         $query->set('posts_per_page', 3);
     }
     if ($query->is_search()) {
@@ -62,24 +62,7 @@ add_action('pre_get_post', function ($query) {
     }
 });
 
-// ページネーション
-function the_pagination() {
-    // 一覧ページのクエリ
-    global $wp_query;
-    // ありそうもない数字をセット
-    $big = 999999999;
-    // １ページ以下なら非表示
-    if ( $wp_query->max_num_pages <= 1 ) return;
-    echo paginate_links( array(
-      'base'         => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-      'format'       => '?paged=%#%',
-      'current'      => max( 1, get_query_var('paged') ),
-      'total'        => $wp_query->max_num_pages,
-      'type'         => 'list',
-      'end_size'     => 2,
-      'mid_size'     => 2
-    ) );
-  }
+
 
 
 

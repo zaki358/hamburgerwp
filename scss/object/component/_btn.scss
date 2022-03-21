@@ -53,7 +53,7 @@
     width   : 32px;
     height  : 32px;
     position: absolute;
-    top     : 3%;
+    top     : 1%;
     left    : function.svw(290);
     @include mixin.media("tab"){
         left:function.tvw(310);

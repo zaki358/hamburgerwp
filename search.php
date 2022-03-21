@@ -52,7 +52,7 @@
         <p class="c-text--page">page</p>
         <ul class="p-pagination__list u-margin--pagination__list">
 
-        <?php if( function_exists("the_pagination") ) the_pagination(); ?>
+        <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
 
     </div>
 </main>
