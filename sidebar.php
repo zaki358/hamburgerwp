@@ -14,14 +14,13 @@
         ); ?>
 
         <button class="c-btn--menu js-menu--close">
-            <img src="img/sidebar_menu_btn_icon.svg" alt="どうして・・・">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/sidebar_menu_btn_icon.svg" alt="phpファイルで画像取得するには関数が必要">
         </button>
     </nav>
-
 </aside>
 
-
-<!--<?php
+<!--　ウィジェットは使用しない
+<?php
     //if (is_active_sidebar('menu_widget')) :
     //dynamic_sidebar('menu_widget');
     //else :
@@ -30,5 +29,5 @@
                     <h2>No Widget</h2>
                     <p>ウィジェットは設定されていません。</p>
                 </div> -->
-<?php //endif; 
+<?php //endif;
 ?>
