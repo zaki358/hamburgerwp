@@ -10,7 +10,6 @@ add_action('after_setup_theme', function () {
         'caption'
     ));
     add_theme_support('title-tag');
-    //add_theme_support('menus');
     add_theme_support('post-thumbnails');
     register_nav_menus(
         array(
@@ -62,8 +61,6 @@ add_action('pre_get_post', function ($query) {
         $query->set('cat', -1);
     }
 });
-
-
 
 //ページネーション呼び出し関数
 function pagination($pages = '', $range = 2)
