@@ -23,13 +23,17 @@
         </p>
     </section>
 
+
+
+
     <?php
-    if (have_posts()) :
-        while (have_posts()) : the_post(); ?>
+        if (have_posts()):
+        while (have_posts()) :the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="p-card--archive">
+
                 <section class="p-card__body--archive u-margin-card--archive">
-                    <?php the_post_thumbnail('thumbnail', array('class' => 'c-img--card--archive')); ?>
+                    <?php the_post_thumbnail('large', array('class' => 'c-img--card--archive')); ?>
                     <div class="p-card__item--archive">
                         <h3 class="c-title--card__menu--archive"><?php the_title() ?></h3>
                         <div class="p-card__text-archive"> <?php the_excerpt(); ?></div>
@@ -42,30 +46,16 @@
         <?php endwhile;
     else :
         ?> <p>表示する記事がありません</p> <?php
-                            endif;
-                                ?>
-
+    endif;
+    ?>
 
 
     <div class="p-pagination">
         <p class="c-text--page">page</p>
-        <ul class="p-pagination__list u-margin--pagination__list">
+        <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
 
-            <?php
-            if (function_exists('pagenation')) { // 関数が定義されていたらtrueになる
-                pagination();
-            } ?>
-
-            <?php the_posts_pagination(
-                array(
-                    'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
-                    'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
-                    'prev_text'     => __('前へ'), // 「前へ」リンクのテキスト
-                    'next_text'     => __('次へ'), // 「次へ」リンクのテキスト
-                    'type'          => 'list', // 戻り値の指定 (plain/list)
-                )
-            ); ?>
     </div>
+
 </main>
 
 <?php get_footer(); ?>
@@ -89,3 +79,23 @@
                 <div class="c-icon--pagination__next"></div>
             </li>
         </ul> -->
+
+<?php //the_posts_pagination(
+//array(
+//'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
+//'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
+//'prev_text'     => __('前へ'), // 「前へ」リンクのテキスト
+//'next_text'     => __('次へ'), // 「次へ」リンクのテキスト
+//'type'          => 'list', // 戻り値の指定 (plain/list)
+//)
+//); 
+?>
+
+
+
+<!--<ul class="p-pagination__list u-margin--pagination__list">
+    <?php
+    //if (function_exists('pagenation')) { // 関数が定義されていたらtrueになる
+    //pagination();
+    //} 
+    ?>-->

@@ -12,7 +12,7 @@
 
             <!--バックグランドにするため使用しないthe_post_thumbnail();-->
             <!-- if文成立不可のため使用しないif (has_post_thumbnail()){-->
-                <div class="p-box--single" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>)">
+                <div class="p-box--single" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id(),'full'); ?>)">
                     <h1 class="c-title--box"><?php the_title(); ?></h1>
                 </div>
 

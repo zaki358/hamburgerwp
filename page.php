@@ -11,7 +11,7 @@
             <!--投稿IDとクラスを取得-->
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                <div class="p-box--page" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>)">
+                <div class="p-box--page" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id(),'full'); ?>)">
                     <h1 class="c-title--box"><?php the_title(); ?></h1>
                 </div>
 
