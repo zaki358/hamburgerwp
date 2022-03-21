@@ -20,7 +20,7 @@ add_action('after_setup_theme', function () {
     );
 });
 
-//タイトル出力
+//タイトル出力（<title>取得）
 add_filter('pre_get_document_title', function ($title) {
     $title = get_bloginfo('name', 'display');
     return $title;
