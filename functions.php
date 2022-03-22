@@ -21,15 +21,14 @@ add_action('after_setup_theme', function () {
 
 //タイトル出力（<title>取得）
 add_filter('pre_get_document_title', function ($title) {
-    if (is_front_page() && is_home()){
-        $title = get_bloginfo('name','display');
-      }elseif(is_singular()){
-        $title = single_post_title('',false);
-      }
-      elseif (is_archive()){
-          $title = single_cat_title('',false);
-      }
-      return $title;
+    if (is_front_page() && is_home()) {
+        $title = get_bloginfo('name', 'display');
+    } elseif (is_singular()) {
+        $title = single_post_title('', false);
+    } elseif (is_archive()) {
+        $title = single_cat_title('', false);
+    }
+    return $title;
 });
 
 //css&js読み込み
@@ -62,17 +61,44 @@ add_action('pre_get_post', function ($query) {
         return;
     }
     if ($query->is_search()) {
-        $query->set('posts_per_page', 3);
-    }
-    if ($query->is_search()) {
         $query->set('cat', -1);
     }
+    return;
 });
 
-
-
-
-
-
-
-
+//カスタム投稿追加
+function create_my_post_types()
+{
+    //カスタム投稿タイプを登録
+    register_post_type(
+        'new', //投稿タイプ名（識別子：半角英数字の小文字）
+        array(
+            'label' => '新メニュー',  //カスタム投稿タイプの名前（管理画面のメニューに表示される）
+            'labels' => array(  //管理画面に表示されるラベルの文字を指定
+                'add_new' => '新メニュー追加',
+                'edit_item' => '新メニューの編集',
+                'view_item' => '新メニューを表示',
+                //'search_items' => '新メニューを検索',
+                //'not_found' => '新メニューは見つかりませんでした。',
+                //'not_found_in_trash' => 'ゴミ箱に新メニューはありませんでした。',
+            ),
+            'public' => true,  // 管理画面に表示しサイト上にも表示する
+            'description' => 'カスタム投稿タイプ「新メニュー」の説明文です。',  //説明文
+            'hierarchicla' => false,  //コンテンツを階層構造にするかどうか
+            'has_archive' => true,  //trueにすると投稿した記事の一覧ページを作成することができる
+            'show_in_rest' => true,  //新エディタ Gutenberg を有効化（REST API を有効化）
+            'supports' => array(  //記事編集画面に表示する項目を配列で指定することができる
+                'title',  //タイトル
+                'editor',  //本文の編集機能
+                'thumbnail',  //アイキャッチ画像（add_theme_support('post-thumbnails')が必要）
+                'excerpt',  //抜粋
+                'custom-fields', //カスタムフィールド
+                'revisions'  //リビジョンを保存
+            ),
+            'menu_position' => 5, //「投稿」の下に追加
+            'taxonomies' => array('new_cat', 'new_tag')  //使用するタクソノミー
+        )
+    );
+}
+//init アクションフックで登録
+add_action('init', 'create_my_post_types');
