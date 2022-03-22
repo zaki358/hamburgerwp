@@ -21,8 +21,15 @@ add_action('after_setup_theme', function () {
 
 //タイトル出力（<title>取得）
 add_filter('pre_get_document_title', function ($title) {
-    $title = get_bloginfo('name', 'display');
-    return $title;
+    if (is_front_page() && is_home()){
+        $title = get_bloginfo('name','display');
+      }elseif(is_singular()){
+        $title = single_post_title('',false);
+      }
+      elseif (is_archive()){
+          $title = single_cat_title('',false);
+      }
+      return $title;
 });
 
 //css&js読み込み

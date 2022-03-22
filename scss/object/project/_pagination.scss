@@ -20,26 +20,30 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 */
 
 .wp-pagenavi {
+    line-height :35px;
+    height: 35px;
     clear: both;
     font-size: 1.6rem;
-    display: flex;
+    display: grid;
     justify-content:space-between;
     width: 100%;
     @include mixin.media("tab") {
-        display: block;
+        display: flex;
+        align-items: center;
         width: auto;
     }
     .pages {
         display: none;
         @include mixin.media("tab") {
             margin-right: 50px;
-            display: inline;
+            display: inline-block;
+            //vertical-align: middle;
         }
     }
     span {
         display: none;
         @include mixin.media("tab") {
-            display: inline;
+            display: inline-block;
             @include mixin.font-roboto;
             margin: 2px 6px;
             line-height: 35px;
@@ -79,6 +83,10 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
         }
     }
     .previouspostslink {
+        vertical-align: middle;
+        margin: 2px 6px;
+        display: inline-block;
+        grid-column: 1/2;
         font-weight: normal;
         color: #707070;
         &::after{
@@ -90,8 +98,14 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
         }
     }
     .nextpostslink {
+        vertical-align: middle;
+        margin: 2px 6px;
+        display: inline-block;
+        grid-column: 2/3;
         font-weight: normal;
         color: #707070;
+        height: 35px;
+        width: auto;
         &::before{
             content: "次へ";
             @include mixin.media("tab") {
@@ -102,44 +116,44 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
     }
 }
 
-.p-pagination__item {
-    @include mixin.font-roboto;
-    font-size: 1.6rem;
-    margin-right: 20px;
-    line-height: 35px;
-}
+//.p-pagination__item {
+//    @include mixin.font-roboto;
+//    font-size: 1.6rem;
+//    margin-right: 20px;
+//    line-height: 35px;
+//}
 
-.p-pagination__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style: none;
-    li:not(.p-pagination__unit) {
-        width: 35px;
-        height: 35px;
-        border: 1px solid #707070;
-        line-height: 35px;
-        text-align: center;
-        @include mixin.font-roboto;
-        font-size: 1.6rem;
-        background-color: white;
-    }
-    li:nth-of-type(2) {
-        color: white;
-        background-color: #3c2b1c;
-    }
-}
+//.p-pagination__list {
+//    display: flex;
+//    flex-direction: row;
+//    justify-content: center;
+//    list-style: none;
+//    li:not(.p-pagination__unit) {
+//        width: 35px;
+//        height: 35px;
+//        border: 1px solid #707070;
+//        line-height: 35px;
+//        text-align: center;
+//        @include mixin.font-roboto;
+//        font-size: 1.6rem;
+//        background-color: white;
+//    }
+//    li:nth-of-type(2) {
+//        color: white;
+//        background-color: #3c2b1c;
+//    }
+//}
 
-.p-pagination__unit {
-    height: auto;
-    width: 17px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    div:last-of-type {
-        position: relative;
-        left: -2px;
-        z-index: 1;
-        //transform: translateY(-50%);
-    }
-}
+//.p-pagination__unit {
+//    height: auto;
+//    width: 17px;
+//    display: flex;
+//    flex-direction: row;
+//    align-items: center;
+//    div:last-of-type {
+//        position: relative;
+//        left: -2px;
+//        z-index: 1;
+//        //transform: translateY(-50%);
+//    }
+//}

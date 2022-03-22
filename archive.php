@@ -13,9 +13,6 @@
 
     <section class="p-description--archive">
         <h3 class="c-title--description--archive">
-            <?php  //$cats = get_the_category();
-            //echo $cats[0]->cat_name;
-            ?>
             <?php single_cat_title(); ?>
         </h3>
         <p class="p-description__text--archive">
