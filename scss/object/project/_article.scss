@@ -5,68 +5,156 @@
 .p-article {
     overflow-y: hidden;
     height: auto;
-}
-
-.p-article__heading--lv1 {
-    margin-top: 30px;
-    font-size: 2.8rem;
-    @include mixin.media("tab") {
-        font-size: 3.6rem;
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    h6 {
+        color: #3c2a10;
+        font-weight: bold;
     }
-    @include mixin.media("pc") {
-        font-size: 3.6rem;
-    }
-}
-
-.p-article__text {
-    margin-top: 60px;
-    height: auto;
-    font-size: 1.6rem;
-}
-
-.p-article__heading--lv2 {
-    margin-top: 60px;
-    font-size: 2.4rem;
-    @include mixin.media("tab") {
+    h2 {
+        margin-top: 30px;
         font-size: 2.8rem;
+        @include mixin.media("tab") {
+            font-size: 3.6rem;
+        }
+        @include mixin.media("pc") {
+            font-size: 3.6rem;
+        }
     }
-    @include mixin.media("pc") {
-        font-size: 2.8rem;
+    h3 {
+        margin-top: 60px;
+        font-size: 2.4rem;
+        @include mixin.media("tab") {
+            font-size: 2.8rem;
+        }
+        @include mixin.media("pc") {
+            font-size: 2.8rem;
+        }
+    }
+    h4 {
+        margin-top: 60px;
+        font-size: 2rem;
+        @include mixin.media("tab") {
+            font-size: 2rem;
+        }
+        @include mixin.media("pc") {
+            font-size: 2rem;
+        }
+    }
+    h5 {
+        margin-top: 60px;
+        font-size: 2rem;
+        @include mixin.media("tab") {
+            font-size: 2rem;
+        }
+        @include mixin.media("pc") {
+            font-size: 2rem;
+        }
+    }
+    h6 {
+        margin-top: 60px;
+        font-size: 2rem;
+        @include mixin.media("tab") {
+            font-size: 2rem;
+        }
+        @include mixin.media("pc") {
+            font-size: 2rem;
+        }
+    }
+    p {
+        margin-top: 60px;
+        height: auto;
+        font-size: 1.6rem;
+    }
+    blockquote {
+        margin-top: 30px;
+        color: #3c2a10;
+        background-color: #f5f5f5;
+        font-size: 1.6rem;
+        padding: 30px 20px;
+        @include mixin.media("tab") {
+            padding: 50px;
+        }
+        @include mixin.media("pc") {
+            padding: 50px;
+        }
+        cite {
+            display: inline-block;
+            padding-top: 30px;
+            quotes: "" "";
+        }
+    }
+    > figure {
+        img {
+            margin-top: 30px;
+            width: 100%;
+        }
     }
 }
 
-.p-article__heading--lv3 {
-    margin-top: 60px;
-    font-size: 2rem;
-    @include mixin.media("tab") {
-        font-size: 2rem;
-    }
-    @include mixin.media("pc") {
-        font-size: 2rem;
-    }
-}
+//.p-article__heading--lv1 {
+//    margin-top: 30px;
+//    font-size: 2.8rem;
+//    @include mixin.media("tab") {
+//        font-size: 3.6rem;
+//    }
+//    @include mixin.media("pc") {
+//        font-size: 3.6rem;
+//    }
+//}
 
-.p-article__heading--lv4 {
-    margin-top: 60px;
-    font-size: 2rem;
-    @include mixin.media("tab") {
-        font-size: 2rem;
-    }
-    @include mixin.media("pc") {
-        font-size: 2rem;
-    }
-}
+//.p-article__text {
+//    margin-top: 60px;
+//    height: auto;
+//    font-size: 1.6rem;
+//}
 
-.p-article__heading--lv5 {
-    margin-top: 60px;
-    font-size: 2rem;
-    @include mixin.media("tab") {
-        font-size: 2rem;
-    }
-    @include mixin.media("pc") {
-        font-size: 2rem;
-    }
-}
+//.p-article__heading--lv2 {
+//    margin-top: 60px;
+//    font-size: 2.4rem;
+//    @include mixin.media("tab") {
+//        font-size: 2.8rem;
+//    }
+//    @include mixin.media("pc") {
+//        font-size: 2.8rem;
+//    }
+//}
+
+//.p-article__heading--lv3 {
+//    margin-top: 60px;
+//    font-size: 2rem;
+//    @include mixin.media("tab") {
+//        font-size: 2rem;
+//    }
+///    @include mixin.media("pc") {
+//        font-size: 2rem;
+//    }
+//}
+
+///.p-article__heading--lv4 {
+// /   margin-top: 60px;
+//    font-size: 2rem;
+//    @include mixin.media("tab") {
+//        font-size: 2rem;
+//    }
+//    @include mixin.media("pc") {
+//        font-size: 2rem;
+//    }
+//}
+
+//.p-article__heading--lv5 {
+//    margin-top: 60px;
+//    font-size: 2rem;
+//    @include mixin.media("tab") {
+//       font-size: 2rem;
+//   }
+//   @include mixin.media("pc") {
+//       font-size: 2rem;
+//   }
+//}
 
 .p-article__quote {
     margin-top: 30px;

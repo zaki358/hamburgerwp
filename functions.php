@@ -60,10 +60,10 @@ add_action('pre_get_post', function ($query) {
     if (is_admin() || !$query->is_main_query()) {
         return;
     }
-    if ($query->is_search()) {
-        $query->set('cat', -1);
+    elseif ($query->is_archive()){
+        $query->set('order', 'ASC');
+        $query->set('orderby','date');
     }
-    return;
 });
 
 //カスタム投稿追加
@@ -102,3 +102,19 @@ function create_my_post_types()
 }
 //init アクションフックで登録
 add_action('init', 'create_my_post_types');
+
+
+//single.phpであるコンテンツのクラス名変更→できない
+//add_filter('wp_insert_post_data', function ($content) {
+    //$content['post_content'] = str_replace('<h2>', '<h2 class="c-title--article__heading">',
+    //$content['post_content'] );
+    //return $content;
+//});
+
+
+//single.phpであるコンテンツのクラス名変更→これもclassが吐き出されない
+function my_replace_to_custom_tags( $postarr ) {
+    $postarr['post_content'] = str_replace('<p>', '<p class="ppp">', $postarr['post_content'] );
+    return $postarr;
+}
+add_filter('wp_insert_post_data', 'my_replace_to_custom_tags');

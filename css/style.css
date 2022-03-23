@@ -174,9 +174,6 @@ th {
     grid-column: 1;
   }
 }
-#l-main article {
-  margin: auto;
-}
 
 @media screen and (min-width: 1025px) {
   #sidebar {
@@ -424,11 +421,6 @@ th {
     font-size: 6rem;
     padding-left: 4.53125vw;
   }
-}
-
-.c-title--article__heading {
-  color: #3C2A10;
-  font-weight: bold;
 }
 
 .c-btn--header {
@@ -1166,14 +1158,15 @@ body.is-open {
 /*
 Default style for WP-PageNavi plugin
 http://wordpress.org/extend/plugins/wp-pagenavi/
+WordPressのプラグインであるWP-PageNaviのレイアウト
 */
 .wp-pagenavi {
-  line-height: 35px;
-  height: 35px;
-  clear: both;
-  font-size: 1.6rem;
   display: grid;
   justify-content: space-between;
+  line-height: 35px;
+  clear: both;
+  font-size: 1.6rem;
+  height: 35px;
   width: 100%;
 }
 @media screen and (min-width: 600px) {
@@ -1188,8 +1181,8 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 }
 @media screen and (min-width: 600px) {
   .wp-pagenavi .pages {
-    margin-right: 50px;
     display: inline-block;
+    margin-right: 50px;
   }
 }
 .wp-pagenavi span {
@@ -1197,23 +1190,23 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 }
 @media screen and (min-width: 600px) {
   .wp-pagenavi span {
-    display: inline-block;
     font-family: "Roboto", sans-serif;
     color: #707070;
-    margin: 2px 6px;
+    display: inline-block;
     line-height: 35px;
+    margin: 2px 6px;
     text-decoration: none;
   }
   .wp-pagenavi span.current {
+    display: inline-block;
+    line-height: 35px;
+    text-align: center;
     border-color: #000;
     font-weight: bold;
     color: white;
     background-color: #3c2b1c;
     width: 35px;
     height: 35px;
-    display: inline-block;
-    line-height: 35px;
-    text-align: center;
   }
 }
 .wp-pagenavi .page {
@@ -1237,12 +1230,14 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   }
 }
 .wp-pagenavi .previouspostslink {
-  vertical-align: middle;
-  margin: 2px 6px;
   display: inline-block;
   grid-column: 1/2;
+  vertical-align: middle;
+  margin: 2px 6px;
   font-weight: normal;
   color: #707070;
+  height: 35px;
+  width: auto;
 }
 .wp-pagenavi .previouspostslink::after {
   content: "前へ";
@@ -1254,10 +1249,10 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   }
 }
 .wp-pagenavi .nextpostslink {
-  vertical-align: middle;
-  margin: 2px 6px;
   display: inline-block;
   grid-column: 2/3;
+  vertical-align: middle;
+  margin: 2px 6px;
   font-weight: normal;
   color: #707070;
   height: 35px;
@@ -1277,86 +1272,115 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   overflow-y: hidden;
   height: auto;
 }
-
-.p-article__heading--lv1 {
+.p-article h2,
+.p-article h3,
+.p-article h4,
+.p-article h5,
+.p-article h5,
+.p-article h6 {
+  color: #3c2a10;
+  font-weight: bold;
+}
+.p-article h2 {
   margin-top: 30px;
   font-size: 2.8rem;
 }
 @media screen and (min-width: 600px) {
-  .p-article__heading--lv1 {
+  .p-article h2 {
     font-size: 3.6rem;
   }
 }
 @media screen and (min-width: 1025px) {
-  .p-article__heading--lv1 {
+  .p-article h2 {
     font-size: 3.6rem;
   }
 }
-
-.p-article__text {
-  margin-top: 60px;
-  height: auto;
-  font-size: 1.6rem;
-}
-
-.p-article__heading--lv2 {
+.p-article h3 {
   margin-top: 60px;
   font-size: 2.4rem;
 }
 @media screen and (min-width: 600px) {
-  .p-article__heading--lv2 {
+  .p-article h3 {
     font-size: 2.8rem;
   }
 }
 @media screen and (min-width: 1025px) {
-  .p-article__heading--lv2 {
+  .p-article h3 {
     font-size: 2.8rem;
   }
 }
-
-.p-article__heading--lv3 {
+.p-article h4 {
   margin-top: 60px;
   font-size: 2rem;
 }
 @media screen and (min-width: 600px) {
-  .p-article__heading--lv3 {
+  .p-article h4 {
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 1025px) {
-  .p-article__heading--lv3 {
+  .p-article h4 {
     font-size: 2rem;
   }
 }
-
-.p-article__heading--lv4 {
+.p-article h5 {
   margin-top: 60px;
   font-size: 2rem;
 }
 @media screen and (min-width: 600px) {
-  .p-article__heading--lv4 {
+  .p-article h5 {
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 1025px) {
-  .p-article__heading--lv4 {
+  .p-article h5 {
     font-size: 2rem;
   }
 }
-
-.p-article__heading--lv5 {
+.p-article h6 {
   margin-top: 60px;
   font-size: 2rem;
 }
 @media screen and (min-width: 600px) {
-  .p-article__heading--lv5 {
+  .p-article h6 {
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 1025px) {
-  .p-article__heading--lv5 {
+  .p-article h6 {
     font-size: 2rem;
   }
+}
+.p-article p {
+  margin-top: 60px;
+  height: auto;
+  font-size: 1.6rem;
+}
+.p-article blockquote {
+  margin-top: 30px;
+  color: #3c2a10;
+  background-color: #f5f5f5;
+  font-size: 1.6rem;
+  padding: 30px 20px;
+}
+@media screen and (min-width: 600px) {
+  .p-article blockquote {
+    padding: 50px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-article blockquote {
+    padding: 50px;
+  }
+}
+.p-article blockquote cite {
+  display: inline-block;
+  padding-top: 30px;
+  quotes: "" "";
+}
+.p-article > figure img {
+  margin-top: 30px;
+  width: 100%;
 }
 
 .p-article__quote {
