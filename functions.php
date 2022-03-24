@@ -56,13 +56,12 @@ add_action('widgets_init', function () {
 });
 
 //メインループのカスタマイズ（archive）
-add_action('pre_get_post', function ($query) {
+add_action('pre_get_posts', function ($query) {
     if (is_admin() || !$query->is_main_query()) {
         return;
-    }
-    elseif ($query->is_archive()){
+    } elseif ($query->is_archive()) {
         $query->set('order', 'ASC');
-        $query->set('orderby','date');
+        $query->set('orderby', 'date');
     }
 });
 
@@ -100,8 +99,17 @@ function create_my_post_types()
         )
     );
 }
-//init アクションフックで登録
 add_action('init', 'create_my_post_types');
+
+
+//画像タグのwidth/heighを削除
+function customize_img_attribute($content)
+{
+    $re_content = preg_replace('/(<img[^>]*)width="\d+"\s+height="\d+"\s/', '$1', $content);
+    return $re_content;
+}
+add_filter('the_content', 'customize_img_attribute');
+
 
 
 //single.phpであるコンテンツのクラス名変更→できない
@@ -113,8 +121,8 @@ add_action('init', 'create_my_post_types');
 
 
 //single.phpであるコンテンツのクラス名変更→これもclassが吐き出されない
-function my_replace_to_custom_tags( $postarr ) {
-    $postarr['post_content'] = str_replace('<p>', '<p class="ppp">', $postarr['post_content'] );
-    return $postarr;
-}
-add_filter('wp_insert_post_data', 'my_replace_to_custom_tags');
+//function my_replace_to_custom_tags( $postarr ) {
+//    $postarr['post_content'] = str_replace('<p>', '<p class="ppp">', $postarr['post_content'] );
+//    return $postarr;
+//}
+//add_filter('wp_insert_post_data', 'my_replace_to_custom_tags');
