@@ -104,7 +104,7 @@ function create_my_post_types()
 add_action('init', 'create_my_post_types');
 
 
-//画像タグのwidth/heighを削除
+//画像タグのwidth/heighを削除１←削除されてないような
 function customize_img_attribute($content)
 {
     $re_content = preg_replace('/(<img[^>]*)width="\d+"\s+height="\d+"\s/', '$1', $content);
@@ -112,6 +112,7 @@ function customize_img_attribute($content)
 }
 add_filter('the_content', 'customize_img_attribute');
 
+//画像タグのwidth/heighを削除２←削除されてないような
 add_filter( 'wp_img_tag_add_width_and_height_attr', '__return_false' );
 
 
