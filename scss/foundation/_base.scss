@@ -7,7 +7,6 @@
 html {
 	height: 100%;
 	font-weight: 500;
-	//overflow-y: hidden;
 }
 
 body {
@@ -16,30 +15,6 @@ body {
 	min-height: 100%;
 	height: 100%;
 	font-size: 1.4rem;
-	//overflow-x: hidden;
-	//position  : relative;
-	//@include mixin.media("tab") {
-	//overflow-x: inherit;
-	//}
-}
-
-img {
-	max-width: 100%;
-	height   : auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure {
-	margin     : 0;
-	padding    : 0;
-	font-size  : 100%;
-	font-weight: normal;
 }
 
 a {
@@ -50,12 +25,16 @@ a {
 	}
 }
 
-ul, ol {
-margin    : 0;
-padding   : 0;
-list-style: none;
+img {
+	max-width: 100%;
+	height   : auto;
 }
 
-th {
-	font-weight: normal;
-}
+
+
+
+
+
+
+
+
