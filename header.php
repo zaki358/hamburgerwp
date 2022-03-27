@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="description" content="ハンバーガーサイトのフロントページ">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <?php //if (is_404()) { ?>
+        <!--<meta http-equiv="refresh" content="3; URL=https://on-ze.com">-->
+    <?php //} ?>
     <?php wp_head(); ?>
 </head>
 
