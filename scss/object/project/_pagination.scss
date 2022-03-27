@@ -14,3 +14,103 @@
     margin-right   : function.svw(10);
 }
 
+/*
+Default style for WP-PageNavi plugin
+http://wordpress.org/extend/plugins/wp-pagenavi/
+WordPressのプラグインであるWP-PageNaviのレイアウト
+*/
+
+.wp-pagenavi {
+    display        : grid;
+    justify-content:space-between;
+    line-height    :35px;
+    clear          : both;
+    font-size      : 1.6rem;
+    height         : 35px;
+    width          : 100%;
+    @include mixin.media("tab") {
+        display    : flex;
+        align-items: center;
+        width      : auto;
+    }
+    .pages {
+        display: none;
+        @include mixin.media("tab") {
+            display     : inline-block;
+            margin-right: 50px;
+        }
+    }
+    span {
+        display: none;
+        @include mixin.media("tab") {
+            @include mixin.font-roboto;
+            display        : inline-block;
+            line-height    : 35px;
+            margin         : 2px 6px;
+            text-decoration: none;
+            &.current {
+                display         : inline-block;
+                line-height     : 35px;
+                text-align      : center;
+                border-color    : #000;
+                font-weight     : bold;
+                color           : white;
+                background-color: #3c2b1c;
+                width           : 35px;
+                height          : 35px;
+            }
+        }
+    }
+    .page {
+        display: none;
+        @include mixin.media("tab") {
+            @include mixin.font-roboto;
+            text-decoration: none;
+            border: 1px solid #bfbfbf;
+            //padding: 3px 5px;
+            margin: 2px 6px;
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+            line-height: 35px;
+            text-align: center;
+            &:hover {
+                border-color: #000;
+            }
+        }
+    }
+    .previouspostslink {
+        display       : inline-block;
+        grid-column   : 1/2;
+        vertical-align: middle;
+        margin        : 2px 6px;
+        font-weight   : normal;
+        color         : #707070;
+        height        : 35px;
+        width         : auto;
+        &::after{
+            content: "前へ";
+            @include mixin.media("tab") {
+                display: none;
+                content: "";
+            }
+        }
+    }
+    .nextpostslink {
+        display       : inline-block;
+        grid-column   : 2/3;
+        vertical-align: middle;
+        margin        : 2px 6px;
+        font-weight   : normal;
+        color         : #707070;
+        height        : 35px;
+        width         : auto;
+        &::before{
+            content: "次へ";
+            @include mixin.media("tab") {
+                display: none;
+                content: "";
+            }
+        }
+    }
+}

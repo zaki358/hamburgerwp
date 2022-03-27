@@ -26,6 +26,11 @@
             left: (100%-44%);
         }
     }
+    ul {
+        margin-left     : 0;
+        padding         : 0;
+        list-style      : none;
+    }
 }
 
 .p-menu__list {
@@ -66,4 +71,9 @@ body.is-open {
     position  : absolute;
     top       : calc(40px - 1rem);
     z-index   : 110;
+    ul {
+        margin          : 0;
+        padding         : 0;
+        list-style      : none;
+    }
 }
