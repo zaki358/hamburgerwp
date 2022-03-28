@@ -24,8 +24,8 @@
 
 
     <?php
-        if (have_posts()):
-        while (have_posts()) :the_post(); ?>
+    if (have_posts()) :
+        while (have_posts()) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="p-card--archive">
 
@@ -43,14 +43,21 @@
         <?php endwhile;
     else :
         ?> <p>表示する記事がありません</p> <?php
-    endif;
-    ?>
+                            endif;
+                                ?>
 
 
     <div class="p-pagination">
-        <p class="c-text--page">page</p>
-        
-        <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
+        <?php $page = max_show_page_number();?>                   
+        <p class="c-text--page">
+            <?php if($page > 1){
+                echo "page";
+            } ?>
+        </p>
+
+        <?php if (function_exists('wp_pagenavi')) {
+            wp_pagenavi();
+        } ?>
 
     </div>
 

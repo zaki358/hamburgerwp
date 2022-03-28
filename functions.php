@@ -116,8 +116,13 @@ add_filter( 'wp_img_tag_add_width_and_height_attr', '__return_false' );
 //本体ギャラリーCSS停止←停止している？
 add_filter( 'use_default_gallery_style', '__return_false' );
 
+//総ページ数取得
+function max_show_page_number() {
+    global $wp_query;
 
-
+    $max_page = $wp_query->max_num_pages;
+     return $max_page;
+}
 
 //single.phpであるコンテンツのクラス名変更→できない
 //add_filter('wp_insert_post_data', function ($content) {

@@ -560,7 +560,7 @@ img {
 }
 @media screen and (min-width: 600px) {
   .c-text--page {
-    display: block;
+    display: inline-block;
     font-family: "Roboto", sans-serif;
     color: #707070;
     font-size: 1.6rem;
