@@ -2,6 +2,8 @@
 $breakpoints: (
     "tab": "screen and (min-width: 600px)",
     "pc": "screen and (min-width: 1025px)",
+    //スマホファーストが使用できないときのみ使用
+    "sp": "screen and (max-width: 599px)",
 ) !default;
 
 $spWidth : 375;

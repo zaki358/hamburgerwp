@@ -113,8 +113,11 @@ add_filter('the_content', 'customize_img_attribute');
 //画像タグのwidth/heighを削除２←削除されてないような
 add_filter( 'wp_img_tag_add_width_and_height_attr', '__return_false' );
 
-//ギャラリー停止
+//本体ギャラリーCSS停止←停止している？
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+
+
 
 //single.phpであるコンテンツのクラス名変更→できない
 //add_filter('wp_insert_post_data', function ($content) {

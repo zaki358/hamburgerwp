@@ -91,6 +91,7 @@ body {
   min-height: 100%;
   height: 100%;
   font-size: 1.4rem;
+  overflow-x: hidden;
 }
 
 a {
@@ -1257,8 +1258,11 @@ WordPressのプラグインであるWP-PageNaviのレイアウト
 .p-article {
   overflow-y: hidden;
 }
+.p-article img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .p-article pre {
-  background-color: #f5f5f5;
   height: 240px;
   display: flex;
   align-items: center;
@@ -1286,32 +1290,34 @@ WordPressのプラグインであるWP-PageNaviのレイアウト
   list-style: none;
   padding-left: 20px;
 }
+.p-article ul ul {
+  margin-top: 14px;
+}
+.p-article ol ol {
+  margin-top: 14px;
+}
 .p-article table th,
 .p-article table td {
   padding: 30px;
   border: solid 1px;
 }
-.p-article .wp-block-gallery .wp-block-image * figure.wp-block-image:not(#individual-image) {
-  width: 100%;
+.p-article .wp-block-gallery.has-nested-images figure.wp-block-image {
+  flex-grow: 0;
 }
-.p-article .gallery-columns-1 .gallery-item {
-  /** カラムなし **/
+.p-article .wp-block-button {
   width: 100%;
-  margin-right: 0;
 }
 @media screen and (min-width: 600px) {
-  .p-article .gallery-columns-2 .gallery-item {
-    /** カラムなし **/
-    width: 48%;
-    margin-right: 0;
+  .p-article .wp-block-button {
+    width: 60%;
   }
 }
-@media screen and (min-width: 1025px) {
-  .p-article .gallery-columns-3 .gallery-item {
-    /** 3カラム **/
-    width: 31.33333%;
-    margin: 0 1%;
-  }
+.p-article .wp-block-button__link {
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 10rem;
 }
 
 .p-group-img {
