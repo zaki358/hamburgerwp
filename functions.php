@@ -111,17 +111,17 @@ function customize_img_attribute($content)
 add_filter('the_content', 'customize_img_attribute');
 
 //画像タグのwidth/heighを削除２←削除されてないような
-add_filter( 'wp_img_tag_add_width_and_height_attr', '__return_false' );
+add_filter('wp_img_tag_add_width_and_height_attr', '__return_false');
 
 //本体ギャラリーCSS停止←停止している？
-add_filter( 'use_default_gallery_style', '__return_false' );
+add_filter('use_default_gallery_style', '__return_false');
 
 //総ページ数取得
-function max_show_page_number() {
+function max_show_page_number()
+{
     global $wp_query;
-
     $max_page = $wp_query->max_num_pages;
-     return $max_page;
+    return $max_page;
 }
 
 
