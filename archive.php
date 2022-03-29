@@ -23,7 +23,6 @@
         while (have_posts()) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="p-card--archive">
-
                 <section class="p-card__body--archive u-margin-card--archive">
                     <?php the_post_thumbnail('large', array('class' => 'c-img--card--archive')); ?>
                     <div class="p-card__item--archive">
@@ -33,7 +32,6 @@
                             <button class="c-btn--card--archive">詳しく見る</button></a>
                     </div>
                 </section>
-
             </article>
 
         <?php endwhile;

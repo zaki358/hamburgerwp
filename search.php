@@ -46,9 +46,16 @@
         endif;?>
 
     <div class="p-pagination">
-        <p class="c-text--page">page</p>
-        <ul class="p-pagination__list u-margin--pagination__list">
-        <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
+    <?php $page = max_show_page_number(); ?>
+        <p class="c-text--page">
+        <?php if ($page > 1) {
+                echo "page";
+            } ?>
+        </p>
+
+        <?php if(function_exists('wp_pagenavi')) { 
+            wp_pagenavi(); 
+        } ?>
     </div>
 </main>
 

@@ -3,7 +3,6 @@
 @use "../../foundation/variables";
 @use "sass:math";
 
-
 .c-title--header {
     @include mixin.font-roboto;
     display   : inline-block;

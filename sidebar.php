@@ -19,6 +19,9 @@
     </nav>
 </aside>
 
+
+
+
 <!--　ウィジェットは使用しない
 <?php
     //if (is_active_sidebar('menu_widget')) :

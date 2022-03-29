@@ -23,9 +23,9 @@
             </div>
 
         <?php endwhile;
-    else : ?>
+        else : ?>
         <p>表示する記事がありません</p><?php
-                        endif; ?>
+        endif; ?>
 
 </main>
 

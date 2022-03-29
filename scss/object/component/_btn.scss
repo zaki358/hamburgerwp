@@ -2,7 +2,6 @@
 @use "../../foundation/function";
 @use "../../foundation/variables";
 
-
 .c-btn--header {
     @include mixin.btn-reset;
     font-family     : "Roboto", sans-serif;
@@ -22,7 +21,6 @@
 }
 
 .c-btn--menu {
-    //content:url('../img/sidebar_menu_btn_icon.svg');
     @include mixin.btn-reset;
     display : inline-block;
     width   : 32px;
@@ -37,9 +35,6 @@
         display: none;
     }
 }
-
-
-
 
 .c-btn--card--archive {
     border       : none;
