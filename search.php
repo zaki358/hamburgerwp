@@ -30,7 +30,7 @@
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="p-card--archive">
                 <section class="p-card__body--archive u-margin-card--archive">
-                    <?php the_post_thumbnail('thumbnail', array('class' => 'c-img--card--archive')); ?>
+                    <?php the_post_thumbnail('large', array('class' => 'c-img--card--archive')); ?>
                     <div class="p-card__item--archive">
                         <h3 class="c-title--card__menu--archive"><?php the_title() ?></h3>
                         <div class="p-card__text-archive"><?php the_excerpt(); ?></div>
