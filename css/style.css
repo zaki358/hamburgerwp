@@ -569,6 +569,11 @@ img {
   }
 }
 
+.c-text__nothing {
+  margin: auto;
+  font-weight: bold;
+}
+
 .p-header__form {
   display: inline-block;
   max-height: 46px;

@@ -33,18 +33,18 @@
                             <button class="c-btn--card--archive">詳しく見る</button></a>
                     </div>
                 </section>
+
             </article>
 
         <?php endwhile;
-    else :
-        ?> <p>表示する記事がありません</p> <?php
-                            endif;
-                                ?>
+         else :
+        ?> <p class="c-text__nothing">表示する記事がありません</p> <?php
+        endif;?>
 
     <div class="p-pagination">
-        <?php $page = max_show_page_number();?>
+        <?php $page = max_show_page_number(); ?>
         <p class="c-text--page">
-            <?php if($page > 1){
+            <?php if ($page > 1) {
                 echo "page";
             } ?>
         </p>

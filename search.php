@@ -41,10 +41,9 @@
             </article>
 
         <?php endwhile;
-    else :
+        else :
         ?> <p>表示する記事がありません</p> <?php
-                            endif;
-                                ?>
+        endif;?>
 
     <div class="p-pagination">
         <p class="c-text--page">page</p>
