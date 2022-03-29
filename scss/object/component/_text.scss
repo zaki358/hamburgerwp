@@ -7,8 +7,8 @@
     @include mixin.media("tab") {
         display: inline-block;
         @include mixin.font-roboto;
-        font-size: 1.6rem;
+        font-size   : 1.6rem;
         margin-right: 5px;
-        line-height: 35px;
+        line-height : 35px;
     }
 }

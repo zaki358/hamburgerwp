@@ -54,22 +54,16 @@
     margin-bottom: 40px;
     margin-left  : 20px;
     margin-right : 20px;
-    //margin-left  : function.svw(10);
-    //margin-right : function.svw(10);
     @include mixin.media("tab") {
         margin-top   : 70px;
         margin-bottom: 70px;
         margin-left  : 60px;
         margin-right : 60px;
-        //margin-left  : function.tvw(35);
-        //margin-right : function.tvw(35);
     }
     @include mixin.media("pc") {
         margin-top   : 70px;
         margin-bottom: 70px;
         margin-left  : 100px;
         margin-right : 100px;
-        //margin-left  : function.pvw(100);
-        //margin-right : function.pvw(100);
     }
 }

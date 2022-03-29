@@ -1,6 +1,5 @@
 <footer id="l-footer">
 
-
 <?php wp_nav_menu(
             array(
                 'theme_location' => 'footer-menu',
@@ -18,5 +17,3 @@
 </body>
 
 </html>
-
-<!--<p class="c-title--footer__text__shop">ショップ情報 | ヒストリー</p>-->

@@ -4,7 +4,6 @@
 
 
 .c-btn--header {
-    //left            : 85%; //308 / 375//
     @include mixin.btn-reset;
     font-family     : "Roboto", sans-serif;
     display         : inline-block;
@@ -21,30 +20,6 @@
         display: none;
     }
 }
-
-//.c-btn--menu {
-    //display: none;
-//}
-
-//.c-btn--menu.is-open {
-    //@include mixin.btn-reset;
-    //display : inline-block;
-    //width   : 32px;
-    //height  : 32px;
-    //position: absolute;
-    //top     : 3%;
-    //z-index: 1000;
-    ////left    : function.svw(290);
-    //right: 5%;
-    //@include mixin.media("tab"){
-        ////left:function.tvw(310);
-        //right: 5%;
-    //}
-    //@include mixin.media("pc") {
-        //display: none;
-    //}
-//}
-
 
 .c-btn--menu {
     //content:url('../img/sidebar_menu_btn_icon.svg');
@@ -67,15 +42,14 @@
 
 
 .c-btn--card--archive {
-    border: none;
-    //position: absolute;
-    top:75%;
-    left: calc(50% - 82.5px);
-    width: 165px;
-    height: 44px;
-    color: #707070;
-    font-size: 1.6rem;
-    font-weight: bold;
+    border       : none;
+    top          :75%;
+    left         : calc(50% - 82.5px);
+    width        : 165px;
+    height       : 44px;
+    color        : #707070;
+    font-size    : 1.6rem;
+    font-weight  : bold;
     border-radius: 30% / 100%;
     @include mixin.media("tab") {}
     @include mixin.media("pc") {

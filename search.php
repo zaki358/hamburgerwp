@@ -46,8 +46,6 @@
                             endif;
                                 ?>
 
-
-
     <div class="p-pagination">
         <p class="c-text--page">page</p>
         <ul class="p-pagination__list u-margin--pagination__list">
@@ -58,29 +56,3 @@
 </main>
 
 <?php get_footer(); ?>
-
-<!--<p class="c-text--page">page</p>
-        <p class="p-pagination__item">1/10</p>
-        <ul class="p-pagination__list u-margin--pagination__list">
-            <li class="p-pagination__unit">
-                <div class="c-icon--pagination__prev"></div>
-                <div class="c-icon--pagination__prev"></div>
-            </li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li class="p-pagination__unit">
-                <div class="c-icon--pagination__next"></div>
-                <div class="c-icon--pagination__next"></div>
-            </li>
-        </ul> -->
-
-<?php  //$cats = get_the_category();
-//echo $cats[0]->cat_name;
-?>
-
-<?php //echo category_description();?>

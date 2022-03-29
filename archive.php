@@ -9,8 +9,6 @@
         </div>
     </div>
 
-
-
     <section class="p-description--archive">
         <h3 class="c-title--description--archive">
             <?php single_cat_title(); ?>
@@ -19,9 +17,6 @@
             <?php echo category_description(); ?>
         </p>
     </section>
-
-
-
 
     <?php
     if (have_posts()) :
@@ -46,9 +41,8 @@
                             endif;
                                 ?>
 
-
     <div class="p-pagination">
-        <?php $page = max_show_page_number();?>                   
+        <?php $page = max_show_page_number();?>
         <p class="c-text--page">
             <?php if($page > 1){
                 echo "page";
@@ -58,49 +52,7 @@
         <?php if (function_exists('wp_pagenavi')) {
             wp_pagenavi();
         } ?>
-
     </div>
-
 </main>
 
 <?php get_footer(); ?>
-
-<!--<p class="c-text--page">page</p>
-        <p class="p-pagination__item">1/10</p>
-        <ul class="p-pagination__list u-margin--pagination__list">
-            <li class="p-pagination__unit">
-                <div class="c-icon--pagination__prev"></div>
-                <div class="c-icon--pagination__prev"></div>
-            </li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li class="p-pagination__unit">
-                <div class="c-icon--pagination__next"></div>
-                <div class="c-icon--pagination__next"></div>
-            </li>
-        </ul> -->
-
-<?php //the_posts_pagination(
-//array(
-//'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
-//'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
-//'prev_text'     => __('前へ'), // 「前へ」リンクのテキスト
-//'next_text'     => __('次へ'), // 「次へ」リンクのテキスト
-//'type'          => 'list', // 戻り値の指定 (plain/list)
-//)
-//); 
-?>
-
-
-
-<!--<ul class="p-pagination__list u-margin--pagination__list">
-    <?php
-    //if (function_exists('pagenation')) { // 関数が定義されていたらtrueになる
-    //pagination();
-    //} 
-    ?>-->

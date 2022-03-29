@@ -22,20 +22,10 @@
         @include mixin.font-roboto;
         font-size  : 34px;
         display    : inline-block;
-        //margin-left: 46px;
         margin-left: 40px;
         margin-top : 82px;
     }
 }
-
-//.c-title--menu {
-    //list-style : none;
-    //font-weight: bold;
-    //color      : #707070;
-    //font-size  : 24px;
-    //margin-left: 46px;
-    //margin-top : 85px;
-//}
 
 .c-title--box--front {
     color       : white;
@@ -48,7 +38,6 @@
     @include mixin.media("pc") {
         font-size   : 4rem;
         padding-left: function.pvw(87);
-        ////padding-left: 85px;
     }
 }
 
@@ -107,10 +96,10 @@
 }
 
 .c-title--footer__text__shop{
-    color    : white;
-    font-size: 2rem;
-    display  :flex ;
-    flex-direction: row;
+    color          : white;
+    font-size      : 2rem;
+    display        :flex ;
+    flex-direction : row;
     justify-content: center;
     li{
         display  : inline-block;
@@ -183,7 +172,7 @@
 .c-title--box {
     font-size   : 3.6rem;
     font-weight : bold;
-    color: white;
+    color       : white;
     padding-left: function.svw(25);
     @include mixin.media("tab") {
         padding-left: function.tvw(86);
@@ -192,11 +181,5 @@
     @include mixin.media("pc") {
         font-size   : 6rem;
         padding-left: function.pvw(87);
-        //padding-left: 85px;
     }
 }
-
-//.c-title--article__heading {
-    //color      : #3C2A10;
-    //font-weight: bold;
-//}

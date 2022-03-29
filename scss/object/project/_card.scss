@@ -16,10 +16,6 @@
 }
 
 .p-card__left--front {
-    //display            : inline-block;
-    //position           : relative;
-    //height             : 642px;
-    //background-size: auto;
     background-image   : url(../img/front-page/front-page_card_img_left.png);
     width              : function.svw(335);
     min-height         : 642px;
@@ -29,7 +25,6 @@
     display            : flex;
     flex-direction     : column;
     @include mixin.media("tab") {
-        //height      : 681px;
         width       : function.tvw(357);
         min-height  : 681px;
         height      : auto;
@@ -37,7 +32,6 @@
     }
     @include mixin.media("pc") {
         width       : function.pvw(625);
-        //height      : 1193px;
         min-height  : 1193px;
         height      : auto;
         margin-right: 40px;
@@ -45,9 +39,6 @@
 }
 
 .p-card__right--front {
-    //position           : relative;
-    //height             : 642px;
-    //margin-top         : 16px;
     background-image   : url(../img/front-page/front-page_card_img_right.png);
     width              : function.svw(335);
     min-height         : 642px;
@@ -58,7 +49,6 @@
     flex-direction     : column;
     @include mixin.media("tab") {
         min-height     : 681px;
-        //margin-top : 0;
         width      : function.tvw(357);
         min-height : 681px;
         height     : auto;
@@ -66,7 +56,6 @@
     }
     @include mixin.media("pc") {
         width       : function.pvw(625);
-        //height      : 1193px;
         min-height  : 1193px;
         height      : auto;
         margin-right: 40px;
@@ -75,11 +64,6 @@
 
 .p-card__unit--front {
     margin-top: auto;
-    //vertical-align: bottom;
-    //position      : absolute;
-    //top           : 45%;
-    //left          : 0;
-    //right         : 0;
     display       : flex;
     flex-direction: column;
     align-items   : center;
@@ -89,35 +73,26 @@
     }
     @include mixin.media("pc") {
         margin-bottom: function.pvw(math.div(40, 2));
-        //margin-top: 650px;
-        //top: 68%;
     }
 }
 
-
-
 .p-card__item--front {
     margin-top: auto;
-    //position        : relative;
-    //padding-bottom: 10px;
     display         : inline-block;
     text-align      : center;
     overflow-y      : hidden;
     margin-top      : 10px;
     background-color: rgba($color: #ffffff, $alpha: 0.5);
     width           : function.svw(315);
-    //height          : 163px;
     min-height      : 163px;
     height          : auto;
     @include mixin.media("tab") {
         width     : function.tvw(334);
-        //height    : 172px;
         min-height: 172px;
         height    : auto;
     }
     @include mixin.media("pc") {
         width     : function.pvw(585);
-        //height: 174px;
         min-height: 174px;
         height    : auto;
     }
@@ -140,8 +115,6 @@
     }
 }
 
-//.p-card--archive {position: relative;}
-
 .p-card__body--archive {
     display        : flex;
     flex-direction : column;
@@ -153,23 +126,14 @@
         justify-content: center;
         width          : function.tvw(756);
         height         : 354px;
-        //min-height     : 354px;
-        //height         : auto;
     }
     @include mixin.media("pc") {
         width : function.pvw(1353);
         height: 470px;
-        //min-height: 470px;
-        //height: auto;
-        //height: calc(function.pvw(1353) * 0.35);
     }
 }
 
 .p-card__item--archive {
-    //position         : relative;
-    //min-height       : 60%;
-    //height           : auto;
-    //width            : function.svw(336);
     text-align: center;
     background-color : #3C2B1C;
     padding-top      : 30px;
@@ -183,7 +147,6 @@
         padding-left     : function.tvw(44);
         width            : 50%;
         height           : 100%;
-        //min-height: 100%;
     }
     @include mixin.media("pc"){
         padding-right    : function.pvw(104);
@@ -207,9 +170,6 @@
         margin-bottom: 10px;
     }
     @include mixin.media("pc"){
-        //width : function.pvw(510);
-        //min-height: 125px;
-        //height: auto;
         height       : 145px;
         margin-top   : 15px;
         margin-bottom: 10px;

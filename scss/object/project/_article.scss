@@ -50,7 +50,9 @@
             border: solid 1px;
         }
     }
+    //wp-blockクラス名
     .wp-block {
+        //ギャラリー設定
         &-gallery {
             &.has-nested-images figure.wp-block-image {
                 flex-grow: 0;
@@ -72,6 +74,8 @@
         }
     }
 }
+
+//以下コメントアウト（メモ代わり）
 
 //single.phpのギャラリーの余白等
 //.wp-block-gallery {
