@@ -49,9 +49,7 @@
     <div class="p-pagination">
         <p class="c-text--page">page</p>
         <ul class="p-pagination__list u-margin--pagination__list">
-
         <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
-
     </div>
 </main>
 
