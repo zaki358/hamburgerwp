@@ -101,19 +101,10 @@ function create_my_post_types()
 }
 add_action('init', 'create_my_post_types');
 
-
-//画像タグのwidth/heighを削除１←削除されてないような
-function customize_img_attribute($content)
-{
-    $re_content = preg_replace('/(<img[^>]*)width="\d+"\s+height="\d+"\s/', '$1', $content);
-    return $re_content;
-}
-add_filter('the_content', 'customize_img_attribute');
-
-//画像タグのwidth/heighを削除２←削除されてないような
+//画像タグのwidth/heighを削除
 add_filter('wp_img_tag_add_width_and_height_attr', '__return_false');
 
-//本体ギャラリーCSS停止←停止している？
+//本体ギャラリーCSS停止
 add_filter('use_default_gallery_style', '__return_false');
 
 //総ページ数取得
@@ -123,100 +114,3 @@ function max_show_page_number()
     $max_page = $wp_query->max_num_pages;
     return $max_page;
 }
-
-
-//以下コメントアウト（メモ代わり）
-
-//single.phpであるコンテンツのクラス名変更→できない
-//add_filter('wp_insert_post_data', function ($content) {
-    //$content['post_content'] = str_replace('<h2>', '<h2 class="c-title--article__heading">',
-    //$content['post_content'] );
-    //return $content;
-//});
-
-
-//single.phpであるコンテンツのクラス名変更→これもclassが吐き出されない
-//function my_replace_to_custom_tags( $postarr ) {
-//    $postarr['post_content'] = str_replace('<p>', '<p class="ppp">', $postarr['post_content'] );
-//    return $postarr;
-//}
-//add_filter('wp_insert_post_data', 'my_replace_to_custom_tags');
-
-
-//$cat = get_the_category();
-// カテゴリー名の取得
-//$cat_name = $cat[0]->name;
-// カテゴリーidの取得
-//$cat_id = $cat[0]->cat_ID;
-// カテゴリースラッグの取得
-//$cat_slug = $cat[0]->slug;
-// カテゴリーの説明の取得
-//$cat_description = $cat[0]->category_description;
-// 親カテゴリーのIDを取得
-//$cat_parent_id = $cat[0]->category_parent;
-// 親カテゴリーのIDから情報を取得
-//$cat_parent = get_category($cat[0]->category_parent);
-// 親カテゴリー名を取得
-//$cat_parent_catname = $parent->cat_name;
-
-
-//ページネーション（案１）
-//function pagination($pages = '', $range = 2)
-//{
-//    $showitems = ($range * 1) + 1;
-//    global $paged;
-//    if (empty($paged)) $paged = 1;
-//    if ($pages == '') {
-//        global $wp_query;
-//        $pages = $wp_query->max_num_pages;
-//        if (!$pages) {
-//            $pages = 1;
-//        }
-//    }
-//    if (1 != $pages) {
-
-        //「1/2」表示 現在のページ数 / 総ページ数
-//        echo "<div class=\"m-pagenation__result\">" . $paged . "/" . $pages . "</div>";
-        // 「前へ」を表示
-//        if ($paged > 1) echo "<div class=\"m-pagenation__prev\">
-//                                <a href='" . get_pagenum_link($paged - 1) . "'>前へ</a>
-//                               </div>";
-//        // ページ番号を出力
-//        echo "<ol class=\"m-pagenation__body\">\n";
-//        for ($i = 1; $i <= $pages; $i++) {
-//            if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
-//                echo ($paged == $i) ? "<li class=\"-current\">" . $i . "</li>" : // 現在のページの数字はリンク無し
-//                    "<li><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
-//            }
-//        }
-        // [...] 表示
-//        if (($paged + 4) < $pages) {
-//            echo "<li class=\"notNumbering\">...</li>";
-//            echo "<li><a href='" . get_pagenum_link($pages) . "'>" . $pages . "</a></li>";
-//        }
-//        echo "</ol>\n";
-//        // 「次へ」を表示
-//        if ($paged < $pages) echo "<div class=\"m-pagenation__next\">
-//                    <a href='" . get_pagenum_link($paged + 1) . "'>次へ</a></div>";
-//        echo "</div>\n";
-//    }
-//}
-
-// ページネーション(案２)
-//function the_pagination() {
-//    // 一覧ページのクエリ
-//    global $wp_query;
-//    // ありそうもない数字をセット
-//    $big = 999999999;
-//    // １ページ以下なら非表示
-//    if ( $wp_query->max_num_pages <= 1 ) return;
-//    echo paginate_links( array(
-//      'base'         => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-//      'format'       => '?paged=%#%',
-//      'current'      => max( 1, get_query_var('paged') ),
-//      'total'        => $wp_query->max_num_pages,
-//      'type'         => 'list',
-//      'end_size'     => 2,
-//      'mid_size'     => 2
-//    ) );
-//  }
