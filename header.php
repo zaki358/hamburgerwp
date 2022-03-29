@@ -9,6 +9,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
     <div id="l-container">
         <header class="l-header p-header">
             <a class="c-title--header" href="<?php echo esc_url(home_url('/')); ?>">

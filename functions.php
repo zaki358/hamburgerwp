@@ -9,6 +9,7 @@ add_action('after_setup_theme', function () {
         'gallery',
         'caption'
     ));
+    add_theme_support('automatic-feed-links');//←後で調べる
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     register_nav_menus(

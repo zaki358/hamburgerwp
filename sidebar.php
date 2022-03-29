@@ -14,7 +14,7 @@
         ); ?>
 
         <button class="c-btn--menu js-menu--close">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sidebar_menu_btn_icon.svg" alt="phpファイルで画像取得するには関数が必要">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/sidebar_menu_btn_icon.svg" alt="phpファイルで画像取得するには関数が必要">
         </button>
     </nav>
 </aside>

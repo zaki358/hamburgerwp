@@ -9,7 +9,6 @@
 
             <!--投稿IDとクラスを取得-->
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
             <!--バックグランドにするため使用しないthe_post_thumbnail();-->
             <!-- if文成立不可のため使用しないif (has_post_thumbnail()){-->
                 <div class="p-box--single" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id(),'full'); ?>)">
@@ -21,6 +20,7 @@
                         <?php the_content(); ?>
                     </article>
                 </div>
+                    <?php wp_link_pages(); ?>
             </div>
 
         <?php endwhile;
